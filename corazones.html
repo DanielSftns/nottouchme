@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.container{
+			width: 100%;
+			min-height: 100vh;
+			position: relative;
+			background: pink;
+			 background-image: radial-gradient(circle farthest-corner at 0 0, pink 100%, white 30%);
+			overflow: hidden;
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+		.texto{
+			font-size: 3em;
+		    text-align: center;
+		    font-family: cursive;
+		    color: white;
+		    line-height: 1;
+		}
+		.texto span{
+			font-size: 2em;
+		}
+
+		.corazon{
+			position: absolute;
+
+		}
+		.corazon.w1{
+			font-size: 16px;
+			width: 100px;
+			height: 100px;
+			top: 100%;
+			right: 50px;
+			animation-duration: 10s;
+		}
+		.corazon.w2{
+			font-size: 10px;
+			width: 50px;
+			height: 50px;
+			top: 100%;
+			right: 50%;
+			animation-duration: 5s;
+		}
+		.corazon.w3{
+			font-size: 5px;
+			width: 25px;
+			height: 25px;
+			top: 100%;
+			right: 90%;
+			animation-duration: 7s;
+		}
+		.corazon.w4{
+			font-size: 16px;
+			width: 60px;
+			height: 60px;
+			top: 100%;
+			right: 70%;
+			animation-duration: 8s;
+		}
+		.corazon.w5{
+			font-size: 10px;
+			width: 50px;
+			height: 50px;
+			top: 105%;
+			right: 15%;
+			animation-duration: 4s;
+		}
+		.corazon.w6{
+			font-size: 15px;
+			width: 75px;
+			height: 75px;
+			top: 100%;
+			right: 60%;
+			animation-duration: 7s;
+		}
+		.corazon.w7{
+			font-size: 6px;
+			width: 20px;
+			height: 20px;
+			top: 100%;
+			right: 37%;
+			animation-duration: 12s;
+		}
+		.corazon.w8{
+			font-size: 10px;
+			width: 50px;
+			height: 50px;
+			top: 100%;
+			right: 15%;
+			animation-duration: 9s;
+		}
+		.corazon.w9{
+			font-size: 5px;
+			width: 35px;
+			height: 35px;
+			top: 100%;
+			right: 20%;
+			animation-duration: 7s;
+		}
+
+		.corazon-icon{
+			width: 100%;
+			height: 100%;
+			background: red;
+			border-radius: 0  0  0 1em;
+			animation: animar 1s ease-in-out infinite alternate;
+		}
+		.corazon-icon::after{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			color: red;
+			background: red;
+		}
+		.corazon-icon::before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			position: absolute;
+			top: -50%;
+			left: 0;
+			color: red;
+			background: red;
+		}	
+
+		@keyframes animar{
+			from{
+				transform: rotate(-45deg) scale(1);
+			}
+			to{
+				transform: rotate(-45deg) scale(1.05);
+			}
+		}
+
+		.corazon{
+			animation: mover ease infinite;
+		}
+
+		@keyframes mover{
+			0%{
+				opacity: 0;
+				transform: scale(0);
+			}
+			25%{
+				opacity: 1;
+				transform: scale(0.5);
+			}
+			40%{
+				transform: scale(1);
+			}
+			70%{
+				transform: scale(0.7);
+				opacity: 0;
+			}
+			80%{
+				transform: scale(1);
+				opacity: 1;
+			}
+			100%{
+				top: -20%;
+			}
+		}
+
+		.link{
+			position: absolute;
+		    right: 1em;
+		    bottom: 1em;
+		    color: red;
+		    text-decoration: none;
+		}
+
+	</style>
+
+	<div class="container">
+		<div class="texto">
+			<p>Porque eres especial y porque</p>
+			<span>te quiero</span>
+		</div>
+		<div class="corazon w1">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w2">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w3">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w4">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w5">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w6">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w7">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w8">
+			<div class="corazon-icon"></div>
+		</div>
+		<div class="corazon w9">
+			<div class="corazon-icon"></div>
+		</div>
+		<a href="https://www.instagram.com/uniondigital_/" class="link">Create By:  @uniondigital_</a>
+	</div>
+	
+</body>
+</html>
